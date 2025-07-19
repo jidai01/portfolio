@@ -20,6 +20,10 @@
             --dark-text: #ffffff;
         }
 
+        i.fas {
+            color: var(--accent);
+        }
+
         * {
             box-sizing: border-box;
             scroll-behavior: smooth;
@@ -73,8 +77,13 @@
             border: 1px solid var(--accent);
             padding: 6px 12px;
             border-radius: 5px;
-            color: var(--accent);
+            color: var(--bg-light);
             cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-theme:active {
+            transform: rotate(360deg);
         }
 
         .container {
@@ -174,7 +183,7 @@
 </head>
 
 <body>
-    <button class="toggle-theme" onclick="toggleDarkMode()">🌓 Mode</button>
+    <button class="toggle-theme" onclick="toggleDarkMode()">Mode</button>
 
     <header>
         <img src="portfolio.jpg" alt="Foto Jose" />
